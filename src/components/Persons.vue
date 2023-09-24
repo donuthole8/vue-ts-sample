@@ -27,11 +27,15 @@ const persons: Ref<Person[]> = ref([
   },
 ])
 
+const registerPerson = (person: Person) => {
+  persons.value.push(person)
+}
+
 </script>
 
 <template>
   <div class="container flex flex-col">
-    <PersonPostForm />
+    <PersonPostForm @register="registerPerson"/>
     <div class="list-container">
       <ul>
         <PersonList :persons="persons"/>

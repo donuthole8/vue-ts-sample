@@ -8,6 +8,3 @@ import Persons from './components/Persons.vue'
   </h1>
   <Persons />
 </template>
-
-<style scoped>
-</style>

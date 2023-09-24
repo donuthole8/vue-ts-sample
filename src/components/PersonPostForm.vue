@@ -11,7 +11,6 @@ const register = () => {
     name: inputtedName.value,
     age: inputtedAge.value,
   }
-  console.log("person ...", person)
   emit('register', person)
 }
 </script>
