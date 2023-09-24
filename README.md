@@ -13,6 +13,10 @@ sh: vite: command not found のエラーが発生した場合
 npm update
 ```
 
+Vue+tailwindcss
+https://tailwindcss.com/docs/guides/vite#vue
+- 反映されない場合一旦npm run devを再起動させる必要あり
+
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
