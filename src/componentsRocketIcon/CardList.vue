@@ -22,6 +22,10 @@ import RocketIcon from './RocketIcon.vue';
         <RocketIcon />
         <RocketIcon />
       </div>
+      <template #footer>
+        <span>This is footer</span>
+        <RocketIcon size="25px" />
+      </template>
     </Card>
   </div>
 
@@ -32,6 +36,9 @@ import RocketIcon from './RocketIcon.vue';
         <span>Rockets</span>
         <RocketIcon />
       </div>
+      <template #footer>
+        <span>rockets</span>
+      </template>
     </Card>
   </div>
 </template>

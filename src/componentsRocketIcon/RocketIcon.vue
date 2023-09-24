@@ -30,4 +30,8 @@
 export default {
   name: "RocketIcon",
 };
+
+withDefaults(defineProps<{
+  size: string,
+}>(), { size: '52px'})
 </script>
