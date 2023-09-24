@@ -8,7 +8,7 @@ This template should help get you started developing with Vue 3 and TypeScript i
 npm run dev
 ```
 
-sh: vite: command not found
+sh: vite: command not found のエラーが発生した場合
 ```
 npm update
 ```
