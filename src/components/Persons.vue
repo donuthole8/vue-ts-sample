@@ -20,6 +20,11 @@ const persons: Ref<Person[]> = ref([
     name: 'vargo',
     age: 26,
   },
+  {
+    id: 2,
+    name: 'adol',
+    age: 52,
+  },
 ])
 
 </script>

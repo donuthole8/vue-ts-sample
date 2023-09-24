@@ -9,10 +9,10 @@ defineProps<Props>()
 </script>
 
 <template>
-  <li v-for="person in persons" :key="person.id">
-    <span>{{ person.name }}</span>
-    <span>{{ person.age }}</span>
-    <button>
+  <li class="bg-teal-500 rounded m-4" v-for="person in persons" :key="person.id">
+    <span class="m-2">{{ person.name }}</span>
+    <span class="m-2">{{ person.age }}</span>
+    <button class="m-2">
       <span>delete</span>
     </button>
   </li>
