@@ -36,7 +36,6 @@ const deletePerson = (id: number) => {
     person => person.id !== id
   )
 }
-
 </script>
 
 <template>

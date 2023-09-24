@@ -10,7 +10,6 @@ defineProps<Props>()
 const emit = defineEmits(['delete'])
 
 const onClickDelete = (id: number) => {
-  console.log("onClick", id)
   emit('delete', id)
 }
 </script>
