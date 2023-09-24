@@ -2,6 +2,21 @@
 
 This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
+## 開発環境コマンド
+ローカルでのアプリケーション起動
+```
+npm run dev
+```
+
+sh: vite: command not found のエラーが発生した場合
+```
+npm update
+```
+
+Vue+tailwindcss
+https://tailwindcss.com/docs/guides/vite#vue
+- 反映されない場合一旦npm run devを再起動させる必要あり
+
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
