@@ -4,7 +4,7 @@ import PersonPostForm from './PersonPostForm.vue';
 </script>
 
 <template>
-  <div class="container">
+  <div class="container flex flex-col">
     <PersonPostForm />
     <div class="list-container">
       <ul>
