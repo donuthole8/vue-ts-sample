@@ -24,4 +24,3 @@ const addTodo = (title: string) => {
     <button @click="addTodo('add')">Add</button>
   </div>
 </template>
-../useTodo.ts
