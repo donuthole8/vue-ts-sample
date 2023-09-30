@@ -1,12 +1,17 @@
 <script setup lang="ts">
 import { inject } from 'vue'
+import { todoKey } from '../useTodo.ts'
 
-const { todoItems, addTodo: _addTodo } = inject('todoItems')
+const state = inject(todoKey)
+if (!state) {
+  throw new Error('state is undefined')
+}
+
+const { todoItems, addTodo: _addTodo } = state
 
 const addTodo = (title: string) => {
   _addTodo(title)
 }
-
 </script>
 
 <template>
