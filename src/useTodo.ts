@@ -1,4 +1,4 @@
-import { ref } from 'vue'
+import { InjectionKey, ref } from 'vue'
 
 type Todo = {
   id: number,
@@ -28,3 +28,6 @@ export const todoItems = (() => {
 
   return { todoItems, addTodo }
 })()
+
+type TodoItemsType = typeof todoItems
+export const todoKey: InjectionKey<TodoItemsType> = Symbol('useTodoItems')

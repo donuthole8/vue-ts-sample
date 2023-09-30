@@ -5,10 +5,10 @@
 // import CardList from './componentsRocketIcon/CardList.vue'
 // TodoList App
 import { provide } from 'vue'
-import { todoItems } from './userTodo';
+import { todoItems, todoKey } from './useTodo';
 import TodoList from './componentsTodoList/TodoList.vue'
 
-provide('todoItems', todoItems)
+provide (todoKey, todoItems)
 </script>
 
 <template>
@@ -24,3 +24,4 @@ provide('todoItems', todoItems)
   <!-- TodoLIst App -->
   <TodoList />
 </template>
+./useTodo
