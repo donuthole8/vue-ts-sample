@@ -2,7 +2,13 @@
 // Persons App
 // import Persons from './componentsPersons/Persons.vue'
 // RocketIcon App
-import CardList from './componentsRocketIcon/CardList.vue'
+// import CardList from './componentsRocketIcon/CardList.vue'
+// TodoList App
+import { provide } from 'vue'
+import { todoItems } from './userTodo';
+import TodoList from './componentsTodoList/TodoList.vue'
+
+provide('todoItems', todoItems)
 </script>
 
 <template>
@@ -13,5 +19,8 @@ import CardList from './componentsRocketIcon/CardList.vue'
   <!-- <Persons /> -->
 
   <!-- RocketIcon App -->
-  <CardList />
+  <!-- <CardList /> -->
+
+  <!-- TodoLIst App -->
+  <TodoList />
 </template>
