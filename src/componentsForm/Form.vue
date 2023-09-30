@@ -1,12 +1,16 @@
 <script setup lang="ts">
-import { DirectiveBinding, ref, watch } from 'vue'
+import { DirectiveBinding, onMounted, ref, watch } from 'vue'
 import Rating from './Rating.vue'
+import axios from 'axios'
 
 const userName = ref<string>('')
 const from = ref<string>('Japan')
 const interest = ref<[]>([])
 const radios = ref([])
 const ratings = ref<string>('')
+const data = ref()
+const isLoading = ref<boolean>(false)
+const error = ref()
 watch(interest, () => { console.log('interest', interest.value) })
 
 // v-focus
@@ -19,7 +23,26 @@ const vFocus = {
   }
 }
 
+onMounted(async () => {
+  isLoading.value = true
+  try {
+    const response = await axios.get('https://vue-ts-sample-default-rtdb.firebaseio.com/surveys.json')
+    if (response.status !== 200) {
+      throw new Error('server error')
+    }
+    data.value = response
+  } catch (e) {
+    error.value = e
+  }
+  isLoading.value = false
+})
+
 const onSubmit = () => {
+  axios.post('https://vue-ts-sample-default-rtdb.firebaseio.com/surveys.json', {
+    user: userName.value,
+    interest: interest.value
+  })
+
   interest.value = []
 }
 </script>
@@ -73,6 +96,11 @@ const onSubmit = () => {
       </div>
     </div>
     <Rating v-model="ratings"/>
+    <div>
+      <div v-if="isLoading">...loading</div>
+      <div v-if="error">{{ error }}</div>
+      {{ data }}
+    </div>
     <div>
       <button @click.prevent="onSubmit">Save Data</button>
     </div>
